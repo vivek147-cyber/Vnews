@@ -1,0 +1,957 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Vnews</title>
+
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+  
+   {%load static%}
+
+
+<nav class="navbar  navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="{% url 'home' %}">
+    <img src="{%static 'news/8.png'%}" style="height: 45px;" alt=""></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active " style="padding-left: 23px;">
+        <a class="nav-link " href="{% url 'home' %}">HOME<span class="sr-only">(current)</span></a>
+      </li>
+
+
+      <li class="nav-item active " style="padding-left: 23px;">
+        <a class="nav-link " href="#section1">ENTERTAINMENT<span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active " style="padding-left: 23px;">
+        <a class="nav-link " href="#section2">SPORTS<span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active " style="padding-left: 23px;">
+        <a class="nav-link " href="#section3">BUSSINESS<span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active " style="padding-left: 23px;">
+        <a class="nav-link " href="#section4">TECHNOLOGY<span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active " style="padding-left: 23px;">
+        <a class="nav-link " href="#section5">HEALTH<span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active " style="padding-left: 23px;">
+        <a class="nav-link " href="#section6">SCIENCE<span class="sr-only">(current)</span></a>
+      </li>
+      
+
+      <li class="nav-item active " style="padding-left: 23px;">
+        <a class="nav-link " href="#section5">HEALTH<span class="sr-only">(current)</span></a>
+      </li>
+
+
+   
+     
+    </ul>
+  </div>
+</nav>
+
+
+
+
+<style>
+
+  
+
+body {
+  background-color: #363535;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Roboto, Arial, sans-serif;
+  color: #fff;
+  letter-spacing: .02em;
+
+}
+
+.bg-dark {
+  background-color: #2a2929 !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navbar {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: .1rem 1rem;
+}
+
+.navbar-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-left: 103px;
+  margin-bottom: 0;
+  list-style: none;
+
+
+}
+
+.navbar-dark .navbar-nav .active>.nav-link,
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .show>.nav-link {
+
+  color: white;
+
+}
+
+
+.navbar-dark .navbar-nav .active>.nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active:hover,
+.navbar-dark .navbar-nav .nav-link.show:hover,
+.navbar-dark .navbar-nav .show>.nav-link:hover {
+  color: rgb(121, 121, 223);
+}
+
+
+
+
+
+
+.nav-link {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  letter-spacing: .025em;
+  font-size: 15px;
+}
+
+.navbar-nav .nav-link {
+  color: rgb(91, 91, 243);
+  transition: background-color .2s ease-in-out, color .2s ease-in-out;
+
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 10rem;
+  padding: .5rem 0;
+  margin: .125rem 0 0;
+  font-size: 1rem;
+  color: #ced4da;
+  text-align: left;
+  list-style: none;
+  background-color: #2a2929 !important;
+  background-clip: padding-box;
+  border: 1px solid rgba(228, 217, 217, 0.15);
+  border-radius: .25rem;
+}
+
+.dropdown-item {
+  color: #9facbd;
+  transition: background-color .2s ease-in-out, color .2s ease-in-out;
+}
+
+.nav-item.active:hover {
+  color: white;
+}
+
+
+
+  .bg-shadow {
+    background: rgba(76, 76, 76, 0);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(179, 171, 171, 0)), color-stop(49%, rgba(48, 48, 48, 0.37)), color-stop(100%, rgba(19, 19, 19, 0.8)));
+    background: linear-gradient(to bottom, rgba(179, 171, 171, 0) 0%, rgba(48, 48, 48, 0.71) 49%, rgba(19, 19, 19, 0.8) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4c4c4c', endColorstr='#131313', GradientType=0);
+  }
+
+  .top-indicator {
+    right: 0;
+    top: 1rem;
+    bottom: inherit;
+    left: inherit;
+    margin-right: 1rem;
+  }
+
+  .overflow {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .zoom img {
+    transition: all 0.2s linear;
+  }
+
+  .zoom:hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+
+  ul.nav-pills {
+    top: 1px;
+    background-color: #2a2929 !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: -32px;
+    
+  }
+
+  .list-group-item{
+    background-color:  rgb(116, 116, 241);
+    color: white;
+  }
+
+  div.col-sm-9 div {
+    height: 250px;
+    font-size: 17px;
+  }
+
+  .content-heading {
+    float: right;
+    /* margin-bottom: 18px; */
+    margin-top: -205px;
+    padding-left: 6px;
+    margin-left: 219px;
+    padding-top: 6px;
+    color: white;
+    
+
+  }
+
+  #section1,
+    #section2,
+    #section3,
+    #section4,
+    #section5,#section6  {
+    color: #fff;
+    background-color: rgb(116, 116, 241);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-top: 3.5px solid #363535;
+  }
+
+
+  .list-group-item:hover{
+    background-color: #2a2929 !important;
+    color: #673ab7;
+  }
+  .secbelow{
+    margin-top: 33px;
+    padding-top: 0px;
+    margin-bottom: 19px;
+  }
+
+  .content-heading:hover{
+          color: black;
+  }
+
+  .gen:hover{
+   color: #673ab7;
+ }
+
+
+  @media screen and (max-width: 774px) {
+
+    #section1,
+    #section2,
+    #section3,
+    #section4,
+    #section5,#section6 {
+      margin-left: 0px;
+      margin-top: 14px;
+    }
+    .secbelow{
+      display: none;
+    }
+
+    div.col-sm-9 div {
+    height: 300px;
+    font-size: 14px;
+  }
+
+    .content-heading {
+      float: left;
+      padding-left: 6px;
+      margin-top: -3px;
+    margin-left: 5px;
+    }
+
+    
+  ul.nav-pills {
+    top: -34px;
+    background-color: #2a2929 !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   margin-left: 2px;
+  }
+    
+    
+  }
+
+  
+    
+    
+  
+
+  @media (min-width: 768px) and (max-width: 990px) 
+  {
+       
+  ul.nav-pills {
+    top: 1px;
+    background-color: #2a2929 !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   margin-left: -29px;
+   font-size: 11px;
+  }
+
+  }
+
+  
+  @media (min-width: 576px) and (max-width: 768px) 
+  {
+       
+  ul.nav-pills {
+    top: 15px;
+    background-color: #2a2929 !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   margin-left: -29px;
+   padding: 10px;
+   font-size: 9px;
+  }
+
+  }
+
+ 
+  
+ 
+</style>
+
+
+<div class="row" style="margin: 23px auto;">
+  <div class="col-12 pb-5">
+    <!--SECTION START-->
+    <section class="row">
+      <!--Start slider news-->
+      <div class="col-12 col-md-6 pb-0 pb-md-3 pt-2 pr-md-1">
+        <div id="featured" class="carousel slide carousel" data-ride="carousel">
+          <!--dots navigate-->
+          <ol class="carousel-indicators top-indicator">
+            <li data-target="#featured" data-slide-to="0" class="active"></li>
+            <li data-target="#featured" data-slide-to="1"></li>
+            <li data-target="#featured" data-slide-to="2"></li>
+            <li data-target="#featured" data-slide-to="3"></li>
+          </ol>
+
+          <!--carousel inner-->
+          <div class="carousel-inner">
+            <!--Item slider-->
+            <div class="carousel-item active">
+              <div class="card border-0 rounded-0 text-light overflow zoom">
+                <div class="position-relative">
+                  <!--thumbnail img-->
+                  {%for x in health.articles|slice:"1:2"%}
+                  <div class="ratio_left-cover-1 image-wrapper">
+                    <img class="img-fluid w-100" style="height: 628px;" src="{{x.urlToImage}}"
+                    alt="Bootstrap news template">
+                    <a  href="{{x.url}}"><div class="hov" style="color: rgb(255, 255, 255);position: absolute;
+                    top: 87%;
+                    left: 37%;
+                    transform: translate(-50%, -50%); font-size: 16px;">{{x.title}}</div></a>
+                  </div>
+                  {%endfor%}
+                  <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                    <!--title-->
+               
+                      <h2 class="h3 post-title text-white my-1">Bootstrap 4 template news portal magazine perfect for
+                        news site</h2>
+                    </a>
+                    <!-- meta title -->
+                    <div class="news-meta">
+                      <span class="news-author">by <a class="text-white font-weight-bold"
+                          href="../category/author.html">Jennifer</a></span>
+                      <span class="news-date">Oct 22, 2019</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--Item slider-->
+            <div class="carousel-item">
+              <div class="card border-0 rounded-0 text-light overflow zoom">
+                <div class="position-relative">
+                  <!--thumbnail img-->
+                  {%for x in sports.articles|slice:"8:9"%}
+                  <div class="ratio_left-cover-1 image-wrapper">
+                    <img class="img-fluid w-100"style="height: 628px;" src="{{x.urlToImage}}"
+                    alt="Bootstrap news template">
+                    <a  href="{{x.url}}"><p style="color: rgb(255, 255, 255);position: absolute;
+                    top: 87%;
+                    left: 40%;
+                    transform: translate(-50%, -50%); font-size: 16px;">{{x.title}}</p>
+                  </div>
+                  {%endfor%}
+                  <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                    <!--title-->
+                    <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                      <h2 class="h3 post-title text-white my-1">Walmart shares up 10% on online sales lift</h2>
+                    </a>
+                    <!-- meta title -->
+                    <div class="news-meta">
+                      <span class="news-author">by <a class="text-white font-weight-bold"
+                          href="../category/author.html">Jennifer</a></span>
+                      <span class="news-date">Oct 22, 2019</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--Item slider-->
+            <div class="carousel-item">
+              <div class="card border-0 rounded-0 text-light overflow zoom">
+                <div class="position-relative">
+                  <!--thumbnail img-->
+                  {%for x in technology.articles|slice:":1"%}
+                  <div class="ratio_left-cover-1 image-wrapper">
+                    <img class="img-fluid w-100" style="height: 628px;" src="{{x.urlToImage}}"
+                    alt="Bootstrap news template">
+                    <a  href="{{x.url}}"><p style="color: rgb(255, 255, 255);position: absolute;
+                     top: 87%;
+                    left: 37%;
+                    
+                      transform: translate(-50%, -50%); font-size: 16px;">{{x.title}}</p></a>
+                      </div>
+                  {%endfor%}
+                  <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                    <!--title-->
+                    <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                      <h2 class="h3 post-title text-white my-1">Bank chief warns on Brexit staff moves to other
+                        company
+                      </h2>
+                    </a>
+                    <!-- meta title -->
+                    <div class="news-meta">
+                      <span class="news-author">by <a class="text-white font-weight-bold"
+                          href="../category/author.html">Jennifer</a></span>
+                      <span class="news-date">Oct 22, 2019</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--Item slider-->
+            <div class="carousel-item">
+              <div class="card border-0 rounded-0 text-light overflow zoom">
+                <div class="position-relative">
+                  <!--thumbnail img-->
+                  {%for x in science.articles|slice:":1"%}
+                  <div class="ratio_left-cover-1 image-wrapper">
+                    <img class="img-fluid w-100" style="height: 628px;" src="{{x.urlToImage}}"
+                    alt="Bootstrap news template">
+                    <a  href="{{x.url}}"><p style="color: rgb(255, 255, 255);position: absolute;
+                      top: 87%;
+                    left: 37%;
+                    
+                      transform: translate(-50%, -50%); font-size: 16px;">{{x.title}}</p></a>
+                  </div>  
+                  {%endfor%}
+                  <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                    <!--title-->
+                    <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                      <h2 class="h3 post-title text-white my-1">The world's first floating farm making waves in
+                        Rotterdam</h2>
+                    </a>
+                    <!-- meta title -->
+                    <div class="news-meta">
+                      <span class="news-author">by <a class="text-white font-weight-bold"
+                          href="../category/author.html">Jennifer</a></span>
+                      <span class="news-date">Oct 22, 2019</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--end item slider-->
+          </div>
+          <!--end carousel inner-->
+        </div>
+
+        <!--navigation-->
+        <a class="carousel-control-prev" href="#featured" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#featured" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <!--End slider news-->
+
+      <!--Start box news-->
+      <div class="col-12 col-md-6 pt-2 pl-md-1 mb-3 mb-lg-4">
+        <div class="row">
+          <!--news box-->
+          <div class="col-6 pb-1 pt-0 pr-1">
+            <div class="card border-0 rounded-0 text-white overflow zoom">
+              <div class="position-relative">
+                <!--thumbnail img-->
+                {%for x in api_india.articles|slice:"5:6"%}
+                <div class="ratio_right-cover-2 image-wrapper">
+                 
+                    <img class="img-fluid" style="height: 311px;" src="{{x.urlToImage}}"
+                      alt="simple blog template bootstrap">
+
+               
+                  <a  href="{{x.url}}"><p style="color: rgb(255, 255, 255);position: absolute;
+                  top: 64%;
+                  left: 40%;
+                
+                  transform: translate(-50%, -50%); font-size: 13px;">{{x.title}}</p></a>
+                </div>
+                {%endfor%}
+                <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                  <!-- category -->
+                  <a class="p-1 badge badge-primary rounded-0"
+                    href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">Lifestyle</a>
+
+                  <!--title-->
+                  <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                    <h2 class="h5 text-white my-1">Should you see the Fantastic Beasts sequel?</h2>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--news box-->
+          <div class="col-6 pb-1 pl-1 pt-0">
+            <div class="card border-0 rounded-0 text-white overflow zoom">
+              <div class="position-relative">
+                <!--thumbnail img-->
+              
+                  {%for x in technology.articles|slice:"6:7"%}
+                  <div class="ratio_right-cover-2 image-wrapper">
+                   
+                      <img class="img-fluid" style="height: 311px;" src="{{x.urlToImage}}"
+                        alt="simple blog template bootstrap">
+
+                 
+                    <a  href="{{x.url}}"><p style="color: rgb(255, 255, 255);position: absolute;
+                    top: 64%;
+                    left: 40%;
+                   
+                    transform: translate(-50%, -50%); font-size: 13px;">{{x.title}}</p></a>
+                  </div>
+                  {%endfor%}
+             
+                <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                  <!-- category -->
+                  <a class="p-1 badge badge-primary rounded-0"
+                    href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">Motocross</a>
+                  <!--title-->
+                  <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                    <h2 class="h5 text-white my-1">Three myths about Florida elections recount</h2>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--news box-->
+          <div class="col-6 pb-1 pr-1 pt-1">
+            <div class="card border-0 rounded-0 text-white overflow zoom">
+              <div class="position-relative">
+                <!--thumbnail img-->
+                {%for x in bussiness.articles|slice:"3:4"%}
+                <div class="ratio_right-cover-2 image-wrapper">
+                 
+                    <img class="img-fluid" style="height: 311px;" src="{{x.urlToImage}}"
+                      alt="simple blog template bootstrap">
+
+               
+                  <a  href="{{x.url}}"><p style="color: rgb(255, 255, 255);position: absolute;
+                  top: 64%;
+                  left: 40%;
+                 
+                  transform: translate(-50%, -50%); font-size: 13px;">{{x.title}}</p></a>
+                </div>
+                {%endfor%}
+                <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                  <!-- category -->
+                  <a class="p-1 badge badge-primary rounded-0"
+                    href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">Fitness</a>
+                  <!--title-->
+                  <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                    <h2 class="h5 text-white my-1">Finding Empowerment in Two Wheels and a Helmet</h2>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--news box-->
+          <div class="col-6 pb-1 pl-1 pt-1">
+            <div class="card border-0 rounded-0 text-white overflow zoom">
+              <div class="position-relative">
+                <!--thumbnail img-->
+                {%for x in science.articles|slice:"1:2"%}
+                <div class="ratio_right-cover-2 image-wrapper">
+                 
+                    <img class="img-fluid" style="height: 311px;" src="{{x.urlToImage}}"
+                      alt="simple blog template bootstrap">
+
+               
+                  <a  href="{{x.url}}"><p style="color: rgb(255, 255, 255);position: absolute;
+                  top: 64%;
+                  left: 40%;
+                 
+                  transform: translate(-50%, -50%); font-size: 13px;">{{x.title}}</p></a>
+                </div>
+                {%endfor%}
+                <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                  <!-- category -->
+                  <a class="p-1 badge badge-primary rounded-0"
+                    href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">Adventure</a>
+                  <!--title-->
+                  <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                    <h2 class="h5 text-white my-1">Ditch receipts and four other tips to be a shopper</h2>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--end news box-->
+        </div>
+      </div>
+      <!--End box news-->
+    </section>
+    <!--END SECTION-->
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    {% for x in api_india.articles|slice:"2:4" %}
+    <div class="col-sm">
+      <img width="90%" height="75%" src="{{x.urlToImage}}" alt="">
+      <a href="{{x.url}}">
+        <div class="overlay gen" style="margin-top: 7px; color:rgb(255, 255, 255);">{{x.title}}</div>
+      </a>
+    </div>
+    {%endfor%}
+  </div>
+</div>
+
+<br>
+<br> 
+<br>
+
+
+
+<div class="container">
+  <div class="row">
+    <nav class="col-sm-3" id="myScrollspy">
+      <ul class="nav nav-pills nav-stacked list-group-item">
+        <a style="text-decoration: none;" class="list" href="#section1"><li  class="list-group-item">ENTERTAINMENT</li></a>
+        <a style="text-decoration: none;" class="list" href="#section2"><li  class="list-group-item">SPORTS</li></a>
+        <a style="text-decoration: none;" class="list" href="#section3"><li  class="list-group-item">BUSSINESS</li></a>
+        <a style="text-decoration: none;" class="list" href="#section4"><li  class="list-group-item">TECHNOLOGY</li></a>
+        <a style="text-decoration: none;" class="list" href="#section5"><li  class="list-group-item">HEALTH</li></a>
+        <a style="text-decoration: none;" class="list" href="#section6"><li  class="list-group-item">SCIENCE</li></a>
+
+        
+          </ul>
+        </li>
+      </ul>
+      {% for x in general.articles|slice:"2:9" %}
+      <div class="col-sm secbelow">
+        <img width="90%" height="75%" src="{{x.urlToImage}}" alt="">
+        <a href="{{x.url}}">
+          <div class="overlay gen" style="margin-top: 7px; color:rgb(255, 255, 255);">{{x.title}}</div>
+        </a>
+      </div>
+      {%endfor%}
+    </nav>
+    
+     <br>
+      <br> 
+      <br>
+    <div class="col-sm-9">
+      
+      <h2>TOP IN ENTERTAINMENT</h2>
+      <hr style="border-top: 3px solid rgb(255 251 251);">
+      {% for x in api_india.articles|slice:":9" %}
+      <div id="section1">
+        <div class="paragraphs col-sm-9">
+          <div class="row">
+            <div class="span3">
+              <img style="height: 200px; width: 200px;    margin-left: 9px;
+              margin-top: 10px;
+         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); " src="{{x.urlToImage}}">
+              <a  href="{{x.url}}">
+              <div  class="content-heading ">
+                {{x.title}}
+              </div></a>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+      {%endfor%}
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      
+     
+      <h2>TOP IN SPORTS</h2>
+      <hr style="border-top: 3px solid rgb(255 251 251);">
+      {% for x in sports.articles|slice:":9" %}
+      <div id="section2">
+        <div class="paragraphs col-sm-9">
+          <div class="row">
+            <div class="span3">
+              <img style="height: 200px; width: 200px;    margin-left: 9px;
+              margin-top: 10px;
+         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); " src="{{x.urlToImage}}">
+              <a  href="{{x.url}}">
+              <div  class="content-heading ">
+                {{x.title}}
+              </div></a>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+      {%endfor%}
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      
+      <h2>TOP IN BUSSINESS</h2>
+      <hr style="border-top: 3px solid rgb(255 251 251);">
+      {% for x in bussiness.articles|slice:":9" %}
+      <div id="section3">
+        <div class="paragraphs col-sm-9">
+          <div class="row">
+            <div class="span3">
+              <img style="height: 200px; width: 200px;    margin-left: 9px;
+              margin-top: 10px;
+         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); " src="{{x.urlToImage}}">
+              <a  href="{{x.url}}">
+              <div  class="content-heading ">
+                {{x.title}}
+              </div></a>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+      {%endfor%}
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+     
+
+      <h2>TOP IN TECHNOLOGY</h2>
+      <hr style="border-top: 3px solid rgb(255 251 251);">
+      {% for x in technology.articles|slice:":9" %}
+      <div id="section4">
+        <div class="paragraphs col-sm-9">
+          <div class="row">
+            <div class="span3">
+              <img style="height: 200px; width: 200px;    margin-left: 9px;
+              margin-top: 10px;
+         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); " src="{{x.urlToImage}}">
+              <a  href="{{x.url}}">
+              <div  class="content-heading ">
+                {{x.title}}
+              </div></a>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+      {%endfor%}
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      
+
+
+      <h2>TOP IN HEALTH</h2>
+      <hr style="border-top: 3px solid rgb(255 251 251);">
+      {% for x in health.articles|slice:":9" %}
+      <div id="section5">
+        <div class="paragraphs col-sm-9">
+          <div class="row">
+            <div class="span3">
+              <img style="height: 200px; width: 200px;    margin-left: 9px;
+              margin-top: 10px;
+         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); " src="{{x.urlToImage}}">
+              <a  href="{{x.url}}">
+              <div  class="content-heading ">
+                {{x.title}}
+              </div></a>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+      {%endfor%}
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      
+      <h2>TOP IN SCIENCE</h2>
+      <hr style="border-top: 3px solid rgb(255 251 251);">
+      {% for x in science.articles|slice:":9" %}
+      <div id="section6">
+        <div class="paragraphs col-sm-9">
+          <div class="row">
+            <div class="span3">
+              <img style="height: 200px; width: 200px;    margin-left: 9px;
+              margin-top: 10px;
+         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); " src="{{x.urlToImage}}">
+              <a  href="{{x.url}}">
+              <div  class="content-heading ">
+                {{x.title}}
+              </div></a>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+      {%endfor%}
+      <br>
+      <br>
+
+
+
+      
+    </div>
+  </div>
+</div>
+
+<br>
+<br>
+
+<div class="container" id="lastestnews">
+  <h2>LATEST NEWS</h2>
+        <hr style="border-top: 3px solid rgb(255 251 251);">
+  <div class="row">
+    {% for x in head.articles|slice:"2:7" %}
+    <div class="col-sm">
+     <img width="90%" height="75%" src="{{x.urlToImage}}" alt="">
+     <a href="{{x.url}}"><div class="overlay gen" style="margin-top: 7px; color:rgb(255, 255, 255);">{{x.title}}</div></a>
+     
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+    </div>
+    {%endfor%}
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+<footer class=" container py-5">
+  <div class="row">
+    <div class="col-12 col-md">
+      <a href="https://www.linkedin.com/in/vivek-singh-4059b91a8/"><img src="{%static 'news/8.png'%}" style="height: 45px; margin-top: -11px;" alt="">
+      <small class="d-block mb-3 text-muted">© VIVEKSINGH</small></a>
+    </div>
+    <div class="col-6 col-md" >
+      <a href="{% url 'home' %}"><h5 style="margin-bottom: 0.5rem;">HOME</h5>
+
+    </div>
+    <div class="col-6 col-md" >
+      <a href="{% url 'categories'%}"><h5 style="margin-bottom: 0.5rem;">CATEGORIES</h5>
+
+    </div>
+    <div class="col-6 col-md">
+      <a href="https://www.bbc.com/news"><h5 style="margin-bottom: 0.5rem;">BBCNEWS</h5>
+
+    </div>
+    <div class="col-6 col-md">
+      <a href="{https://www.linkedin.com/in/vivek-singh-4059b91a8/"><h5 style="margin-bottom: 0.5rem;">About</h5>
+
+    </div>
+
+    <div class="col-6 col-md">
+      <a style="margin-bottom: 0.5rem;" href="#">back to top</a>
+
+    </div>
+  </div>
+  </footer>
+
+
+
+
+
+
+</body>
+</html>

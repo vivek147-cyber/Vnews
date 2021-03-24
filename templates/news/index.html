@@ -1,0 +1,930 @@
+{% extends 'news/base.html' %}
+
+{% block body %}
+
+
+
+
+
+
+
+
+<style>
+  .img1 {
+    vertical-align: middle;
+    border-style: none;
+    height: 380px;
+  }
+
+  .text-md-center {
+    text-align: center !important;
+    margin-top: -612px;
+    margin-left: 600px;
+  }
+
+  .md.text-center {
+    background: rgba(116, 116, 241, 0.10);
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+    backdrop-filter: blur(0.5px);
+    -webkit-backdrop-filter: blur(0.5px);
+    border-radius: 10px;
+    border: 1px solid rgb(81 66 209 / 18%);
+  }
+
+  .img1 {
+    vertical-align: middle;
+    border-style: none;
+    height: 710px;
+  }
+
+
+  .img2 {
+    vertical-align: middle;
+    border-style: none;
+    height: 640px;
+    margin-left: -88px;
+  }
+
+  .btn {
+
+    margin-left: 130px;
+    margin-top: -550px;
+    background: transparent;
+    text-decoration: none;
+    transition: 0.2s;
+    color: rgb(116, 116, 241);
+    text-transform: uppercase;
+    overflow: hidden;
+    font-size: 20px;
+    border: 2px solid rgb(91, 91, 243);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .btn:hover {
+    color: #2a2929 !important;
+    background: rgb(116, 116, 241);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition-delay: 0.1s;
+
+  }
+
+  .md {
+
+    margin: 34px 260px;
+    height: 404px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .btn1 {
+    background: transparent;
+    text-decoration: none;
+    transition: 0.2s;
+    color: #363535;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+    font-size: 20px;
+    border: 2px solid #363535;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 40px;
+  }
+
+  .btn1:hover {
+    color: rgb(116, 116, 241);
+    background: #363535;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition-delay: 0.1s;
+
+  }
+
+  .tit {
+    padding-left: 402px;
+    padding-top: 14px;
+  }
+
+  .img3 {
+    height: 404px;
+    width: 377px;
+  }
+
+
+
+
+  @media (max-width: 1445px) and (min-width: 1215px) {
+
+
+    .img3 {
+      height: 528px;
+      width: 377px;
+    }
+
+    .md {
+
+      margin: 34px 160px;
+      height: 528px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .btn1 {
+      background: transparent;
+      text-decoration: none;
+      transition: 0.2s;
+      color: #363535;
+      text-transform: uppercase;
+      overflow: hidden;
+      cursor: pointer;
+      font-size: 20px;
+      border: 2px solid #363535;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      height: 40px;
+    }
+
+    .btn1:hover {
+      color: rgb(116, 116, 241);
+      background: #363535;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      transition-delay: 0.1s;
+
+    }
+
+    .tit {
+      padding-left: 402px;
+      padding-top: 14px;
+    }
+
+  }
+
+  @media (max-width: 1215px) and (min-width: 946px) {
+    .text-md-center {
+      text-align: center !important;
+      margin-top: -544px;
+      margin-left: 513px;
+    }
+
+    .img1 {
+      vertical-align: middle;
+      border-style: none;
+      height: 620px;
+    }
+
+
+    .img2 {
+      vertical-align: middle;
+      border-style: none;
+      height: 521px;
+    }
+
+    .btn {
+
+      margin-left: 96px;
+      margin-top: -447px;
+    }
+
+    .img3 {
+      height: 528px;
+      width: 377px;
+    }
+
+    .md {
+
+      margin: 34px 120px;
+      height: 528px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+
+  }
+
+
+  @media (max-width: 946px) and (min-width: 665px) {
+    .text-md-center {
+      text-align: center !important;
+      margin-top: -322px;
+      margin-left: 360px;
+    }
+
+    .img1 {
+      vertical-align: middle;
+      border-style: none;
+      height: 380px;
+    }
+
+
+    .img2 {
+      vertical-align: middle;
+      border-style: none;
+      height: 346px;
+      padding-left: 41px;
+    }
+
+    .btn {
+
+      margin-left: 62px;
+      margin-top: -304px;
+    }
+
+
+    .img3 {
+      height: 658px;
+      width: 377px;
+    }
+
+    .md {
+
+      margin: 34px 12px;
+      height: 658px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+  }
+
+
+  @media (max-width: 665px) and (min-width: 400px) {
+    .text-md-center {
+      text-align: center !important;
+      margin-top: -219px;
+      margin-left: 223px;
+    }
+
+    .img1 {
+      vertical-align: middle;
+      border-style: none;
+      height: 277px;
+    }
+
+
+    .img2 {
+      vertical-align: middle;
+      border-style: none;
+      height: 240px;
+      margin-left: -50px;
+    }
+
+    .btn {
+
+      margin-left: 28px;
+      margin-top: -240px;
+    }
+
+    .img3 {
+      height: 240px;
+      width: 235px;
+    }
+
+    .md {
+
+      margin: 34px 7px;
+      height: 658px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .tit {
+      padding-left: 244px;
+      padding-top: 14px;
+    }
+
+    .tit1 {
+      padding-left: 15px;
+      padding-top: 78px;
+    }
+
+    .tit3 {
+      font-size: 17px;
+    }
+
+    .tit4 {
+      padding-left: 15px;
+      padding-top: 18px;
+    }
+
+
+
+  }
+
+
+  @media (max-width: 400px) and (min-width: 200px) {
+    .text-md-center {
+      text-align: center !important;
+      margin-top: -186px;
+      margin-left: 167px;
+    }
+
+    .img1 {
+      vertical-align: middle;
+      border-style: none;
+      height: 191px;
+    }
+
+
+    .img2 {
+      vertical-align: middle;
+      border-style: none;
+      height: 215px;
+      margin-left: -42px;
+    }
+
+    .btn {
+
+      margin-left: 15px;
+      margin-top: -100px;
+    }
+
+
+    .img3 {
+      height: 171px;
+      width: 152px;
+    }
+
+    .md {
+
+      margin: 34px 23px;
+      height: 551px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .tit {
+      padding-left: 160px;
+      padding-top: 14px;
+    }
+
+    .tit1 {
+      padding-left: 15px;
+      padding-top: 81px;
+    }
+
+    .tit3 {
+      font-size: 17px;
+    }
+
+    .tit4 {
+      padding-left: 15px;
+      padding-top: 18px;
+    }
+
+    .titp {
+      display: none;
+    }
+
+    .slider {
+      margin: 13px;
+    }
+
+    .card1 {
+      width: 329px;
+    }
+
+
+  }
+
+
+  @media (min-width: 768px) {}
+
+  @media (min-width: 992px) {}
+
+
+  @media (min-width: 1200px) {}
+
+
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: -0.5rem;
+    font-family: math;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+  }
+
+  .slider {
+    margin: 20px;
+  }
+
+
+
+
+
+
+  .bg-shadow {
+    background: rgba(76, 76, 76, 0);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(179, 171, 171, 0)), color-stop(49%, rgba(48, 48, 48, 0.37)), color-stop(100%, rgba(19, 19, 19, 0.8)));
+    background: linear-gradient(to bottom, rgba(179, 171, 171, 0) 0%, rgba(48, 48, 48, 0.71) 49%, rgba(19, 19, 19, 0.8) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4c4c4c', endColorstr='#131313', GradientType=0);
+  }
+
+  .top-indicator {
+    right: 0;
+    top: 1rem;
+    bottom: inherit;
+    left: inherit;
+    margin-right: 1rem;
+  }
+
+  .overflow {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .zoom img {
+    transition: all 0.2s linear;
+  }
+
+  .zoom:hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  .card1 {
+
+    box-shadow: 0 8px 32px 0 rgb(0, 0, 0);
+    backdrop-filter: blur(20.0px);
+    -webkit-backdrop-filter: blur(20.0px);
+    border-radius: 10px;
+  }
+
+
+ 
+</style>
+
+<body>
+
+
+  <div class="row" style="margin: 23px auto;">
+    <div class="col-12 pb-5">
+      <!--SECTION START-->
+      <section class="row">
+        <!--Start slider news-->
+        <div class="col-12 col-md-6 pb-0 pb-md-3 pt-2 pr-md-1">
+          <div id="featured" class="carousel slide carousel" data-ride="carousel">
+            <!--dots navigate-->
+            <ol class="carousel-indicators top-indicator">
+              <li data-target="#featured" data-slide-to="0" class="active"></li>
+              <li data-target="#featured" data-slide-to="1"></li>
+              <li data-target="#featured" data-slide-to="2"></li>
+              <li data-target="#featured" data-slide-to="3"></li>
+            </ol>
+
+            <!--carousel inner-->
+            <div class="carousel-inner">
+              <!--Item slider-->
+              <div class="carousel-item active">
+                <div class="card border-0 rounded-0 text-light overflow zoom">
+                  <div class="position-relative">
+                    <!--thumbnail img-->
+                    {%for x in sports.articles|slice:"1:2"%}
+                    <div class="ratio_left-cover-1 image-wrapper">
+                      <img class="img-fluid w-100" style="height: 628px;" src="{{x.urlToImage}}"
+                      alt="Bootstrap news template">
+                      <a  href="{{x.url}}"><div class="hov" style="color: rgb(255, 255, 255);position: absolute;
+                      top: 87%;
+                      left: 37%;
+                      transform: translate(-50%, -50%); font-size: 16px;">{{x.title}}</div></a>
+                    </div>
+                    {%endfor%}
+                    <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                      <!--title-->
+                      <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                        <h2 class="h3 post-title text-white my-1">Bootstrap 4 template news portal magazine perfect for
+                          news site</h2>
+                      </a>
+                      <!-- meta title -->
+                      <div class="news-meta">
+                        <span class="news-author">by <a class="text-white font-weight-bold"
+                            href="../category/author.html">Jennifer</a></span>
+                        <span class="news-date">Oct 22, 2019</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--Item slider-->
+              <div class="carousel-item">
+                <div class="card border-0 rounded-0 text-light overflow zoom">
+                  <div class="position-relative">
+                    <!--thumbnail img-->
+                    {%for x in entertainment.articles|slice:":1"%}
+                    <div class="ratio_left-cover-1 image-wrapper">
+                      <img class="img-fluid w-100"style="height: 628px;" src="{{x.urlToImage}}"
+                      alt="Bootstrap news template">
+                      <a  href="{{x.url}}"><p style="color: rgb(255, 255, 255);position: absolute;
+                      top: 87%;
+                      left: 40%;
+                      transform: translate(-50%, -50%); font-size: 16px;">{{x.title}}</p>
+                    </div>
+                    {%endfor%}
+                    <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                      <!--title-->
+                      <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                        <h2 class="h3 post-title text-white my-1">Walmart shares up 10% on online sales lift</h2>
+                      </a>
+                      <!-- meta title -->
+                      <div class="news-meta">
+                        <span class="news-author">by <a class="text-white font-weight-bold"
+                            href="../category/author.html">Jennifer</a></span>
+                        <span class="news-date">Oct 22, 2019</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--Item slider-->
+              <div class="carousel-item">
+                <div class="card border-0 rounded-0 text-light overflow zoom">
+                  <div class="position-relative">
+                    <!--thumbnail img-->
+                    {%for x in api_head.articles|slice:":1"%}
+                    <div class="ratio_left-cover-1 image-wrapper">
+                      <img class="img-fluid w-100" style="height: 628px;" src="{{x.urlToImage}}"
+                      alt="Bootstrap news template">
+                      <a  href="{{x.url}}"><p style="color: rgb(255, 255, 255);position: absolute;
+                      top: 87%;
+                      left: 40%;
+                      transform: translate(-50%, -50%); font-size: 16px;">{{x.title}}</p>
+                    </div>
+                    {%endfor%}
+                    <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                      <!--title-->
+                      <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                        <h2 class="h3 post-title text-white my-1">Bank chief warns on Brexit staff moves to other
+                          company
+                        </h2>
+                      </a>
+                      <!-- meta title -->
+                      <div class="news-meta">
+                        <span class="news-author">by <a class="text-white font-weight-bold"
+                            href="../category/author.html">Jennifer</a></span>
+                        <span class="news-date">Oct 22, 2019</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--Item slider-->
+              <div class="carousel-item">
+                <div class="card border-0 rounded-0 text-light overflow zoom">
+                  <div class="position-relative">
+                    <!--thumbnail img-->
+                    {%for x in entertainment.articles|slice:"5:6"%}
+                    <div class="ratio_left-cover-1 image-wrapper">
+                      <img class="img-fluid w-100" style="height: 628px;" src="{{x.urlToImage}}"
+                      alt="Bootstrap news template">
+                      <a  href="{{x.url}}"><p style="color: rgb(255, 255, 255);position: absolute;
+                      top: 87%;
+                      left: 40%;
+                      transform: translate(-50%, -50%); font-size: 16px;">{{x.title}}</p>
+                    </div>
+                    {%endfor%}
+                    <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                      <!--title-->
+                      <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                        <h2 class="h3 post-title text-white my-1">The world's first floating farm making waves in
+                          Rotterdam</h2>
+                      </a>
+                      <!-- meta title -->
+                      <div class="news-meta">
+                        <span class="news-author">by <a class="text-white font-weight-bold"
+                            href="../category/author.html">Jennifer</a></span>
+                        <span class="news-date">Oct 22, 2019</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--end item slider-->
+            </div>
+            <!--end carousel inner-->
+          </div>
+
+          <!--navigation-->
+          <a class="carousel-control-prev" href="#featured" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#featured" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+        <!--End slider news-->
+
+        <!--Start box news-->
+        <div class="col-12 col-md-6 pt-2 pl-md-1 mb-3 mb-lg-4">
+          <div class="row">
+            <!--news box-->
+            <div class="col-6 pb-1 pt-0 pr-1">
+              <div class="card border-0 rounded-0 text-white overflow zoom">
+                <div class="position-relative">
+                  <!--thumbnail img-->
+                  {%for x in entertainment.articles|slice:"2:3"%}
+                  <div class="ratio_right-cover-2 image-wrapper">
+                   
+                      <img class="img-fluid" style="height: 311px;" src="{{x.urlToImage}}"
+                        alt="simple blog template bootstrap">
+
+                 
+                    <a  href="{{x.url}}"><p style="color: rgb(255, 255, 255);position: absolute;
+                    top: 64%;
+                    left: 40%;
+                  
+                    transform: translate(-50%, -50%); font-size: 13px;">{{x.title}}</p></a>
+                  </div>
+                  {%endfor%}
+                  <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                    <!-- category -->
+                    <a class="p-1 badge badge-primary rounded-0"
+                      href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">Lifestyle</a>
+
+                    <!--title-->
+                    <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                      <h2 class="h5 text-white my-1">Should you see the Fantastic Beasts sequel?</h2>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--news box-->
+            <div class="col-6 pb-1 pl-1 pt-0">
+              <div class="card border-0 rounded-0 text-white overflow zoom">
+                <div class="position-relative">
+                  <!--thumbnail img-->
+                
+                    {%for x in sports.articles|slice:"3:4"%}
+                    <div class="ratio_right-cover-2 image-wrapper">
+                     
+                        <img class="img-fluid" style="height: 311px;" src="{{x.urlToImage}}"
+                          alt="simple blog template bootstrap">
+  
+                   
+                      <a  href="{{x.url}}"><p style="color: rgb(255, 255, 255);position: absolute;
+                      top: 64%;
+                      left: 40%;
+                     
+                      transform: translate(-50%, -50%); font-size: 13px;">{{x.title}}</p></a>
+                    </div>
+                    {%endfor%}
+               
+                  <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                    <!-- category -->
+                    <a class="p-1 badge badge-primary rounded-0"
+                      href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">Motocross</a>
+                    <!--title-->
+                    <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                      <h2 class="h5 text-white my-1">Three myths about Florida elections recount</h2>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--news box-->
+            <div class="col-6 pb-1 pr-1 pt-1">
+              <div class="card border-0 rounded-0 text-white overflow zoom">
+                <div class="position-relative">
+                  <!--thumbnail img-->
+                  {%for x in entertainment.articles|slice:"3:4"%}
+                  <div class="ratio_right-cover-2 image-wrapper">
+                   
+                      <img class="img-fluid" style="height: 311px;" src="{{x.urlToImage}}"
+                        alt="simple blog template bootstrap">
+
+                 
+                    <a  href="{{x.url}}"><p style="color: rgb(255, 255, 255);position: absolute;
+                    top: 64%;
+                    left: 40%;
+                   
+                    transform: translate(-50%, -50%); font-size: 13px;">{{x.title}}</p></a>
+                  </div>
+                  {%endfor%}
+                  <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                    <!-- category -->
+                    <a class="p-1 badge badge-primary rounded-0"
+                      href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">Fitness</a>
+                    <!--title-->
+                    <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                      <h2 class="h5 text-white my-1">Finding Empowerment in Two Wheels and a Helmet</h2>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--news box-->
+            <div class="col-6 pb-1 pl-1 pt-1">
+              <div class="card border-0 rounded-0 text-white overflow zoom">
+                <div class="position-relative">
+                  <!--thumbnail img-->
+                  {%for x in sports.articles|slice:"5:6"%}
+                  <div class="ratio_right-cover-2 image-wrapper">
+                   
+                      <img class="img-fluid" style="height: 311px;" src="{{x.urlToImage}}"
+                        alt="simple blog template bootstrap">
+
+                 
+                    <a  href="{{x.url}}"><p style="color: rgb(255, 255, 255);position: absolute;
+                    top: 64%;
+                    left: 40%;
+                   
+                    transform: translate(-50%, -50%); font-size: 13px;">{{x.title}}</p></a>
+                  </div>
+                  {%endfor%}
+                  <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                    <!-- category -->
+                    <a class="p-1 badge badge-primary rounded-0"
+                      href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">Adventure</a>
+                    <!--title-->
+                    <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                      <h2 class="h5 text-white my-1">Ditch receipts and four other tips to be a shopper</h2>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--end news box-->
+          </div>
+        </div>
+        <!--End box news-->
+      </section>
+      <!--END SECTION-->
+    </div>
+  </div>
+
+  <div class="jumbptro" style="margin-top: -109px;">
+    {%load static%}
+    <img class="img2" src="{%static 'news/9.png'%}" alt="">
+    <div class="text-md-center">
+      <img class="img1" src="{%static 'news/5.png'%}" alt="">
+    </div>
+    <a href="categories/"><button type="button" class="btn ">
+      Click here >
+    </button></a>
+
+  </div>
+
+
+  <section id=headline style="background-color:  rgb(116, 116, 241);">
+
+    <div class="text-center" style="color: white;">
+      <h1><b>TOP HEADLINES</b></h1>
+
+    </div>
+
+    {%for x in api_india.articles|slice:"2:"%}
+    <div class="md text-center">
+      <img class="img3 float-left" src="{{x.urlToImage}}">
+      <div class="tit text-left">
+        <h3 class="tit3" style="color:  #363535;"><b>{{x.title}}</b></h3>
+        <hr
+          style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);   border-top:3.5px solid  #363535">
+      </div>
+
+      <div class=" titp tit text-left">
+        <p>{{x.title}}</p>
+      </div>
+
+      <div class=" tit1 tit text-left">
+        <p>{{x.content}}</p>
+      </div>
+
+      <div class="tit4 tit text-left">
+        <a href="{{x.url}}"><button class="btn1"> Read More >
+
+          </button></a>
+      </div>
+    </div>
+    {%endfor%}
+
+
+
+    <br>
+    <br>
+
+  </section>
+
+
+  <br>
+  <div id="topworld" class="container my-4">
+
+    <div class="text-center" style="color: white;">
+      <h1><b>TOP IN WORLD</b></h1>
+
+    </div>
+
+
+    <br>
+
+
+
+    {% for x in api.articles %}
+    <div class="container-fluid">
+      <a  href="{{x.url}}">
+        <h3 class="tit3" style="color:  rgb(116, 116, 241); margin-top: 35px; ">{{x.title}}</h3>
+      </a>
+      <hr
+        style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);   border-top:1.5px solid  rgb(116, 116, 241)">
+      <img width="55%" height="45%" src="{{x.urlToImage}}" alt="..."
+        style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+
+
+    </div>
+    {% endfor%}
+
+
+
+  </div>
+
+  <br>
+  <br>
+
+
+
+  <div class="container">
+    <div class="row">
+      <br />
+      <div class="col text-center">
+        <h2>COVID-19 ANALYSIS(INDIA)</h2>
+        <hr style="border-top: 3px solid rgb(255 251 251);">
+
+      </div>
+    </div>
+    <br>
+    <div class="row text-center">
+      <div class="col">
+        <div class="card1"
+          style=" margin-left: 22px; height: 131px; width: 282px; margin-bottom: 13px;  background: rgba(116,116,241);">
+          <h4>NEW CASES</h4>
+          {%for x in covid_api|slice:"76:77"%}
+          <h2 style="font-size: 97px; font-weight: bolder;">{{x.NewConfirmed}}</h2>
+          {%endfor%}
+        </div>
+      </div>
+      <br>
+      <div class="col">
+        <div class="card1"
+          style="margin-left: 22px;  height: 131px;width: 282px;margin-bottom: 13px; background: rgb(22, 209, 94);">
+          <h4>RECOVERED CASES</h4>
+          {%for x in covid_api|slice:"76:77"%}
+          <h2 style="font-size: 97px; font-weight: bolder;">{{x.NewRecovered}}</h2>
+          {%endfor%}
+        </div>
+      </div>
+      <br>
+      <div class="col">
+        <div class="card1" style="margin-left: 22px;  height: 131px;width: 282px; background: rgb(243, 52, 4);">
+          <h4>DEATH</h4>
+          {%for x in covid_api|slice:"76:77"%}
+          <h2 style="font-size: 97px; font-weight: bolder;">{{x.NewDeaths}}</h2>
+          {%endfor%}
+        </div>
+      </div>
+
+    </div>
+
+    <br>
+    <br>
+    
+  </div>
+  <div class="container">
+   
+    <div class="row">
+      {% for x in health.articles|slice:"2:7" %}
+      <div class="col-sm">
+        <img width="90%" height="75%" src="{{x.urlToImage}}" alt="">
+        <a href="{{x.url}}">
+          <div class="overlay" style="margin-top: 7px; color:rgb(255, 255, 255);">{{x.title|slice:":90"}}</div>
+        </a>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+      {%endfor%}
+    </div>
+  </div>
+  
+ 
+  
+  <br>
+  <br>
+  
+  <br>
+  <br>
+    
+
+
+  {% block foot %}
+  {% endblock %}
+
+  {% endblock %}

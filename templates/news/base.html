@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Vnews</title>
+
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+<style>
+
+
+body {
+    background-color: #363535;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: Roboto, Arial, sans-serif;
+    color: #fff;
+    letter-spacing: .02em;
+
+  }
+
+  .bg-dark {
+    background-color: #2a2929 !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .navbar {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: .1rem 1rem;
+  }
+
+  .navbar-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 103px;
+    margin-bottom: 0;
+    list-style: none;
+
+
+  }
+
+  .navbar-dark .navbar-nav .active>.nav-link,
+  .navbar-dark .navbar-nav .nav-link.active,
+  .navbar-dark .navbar-nav .nav-link.show,
+  .navbar-dark .navbar-nav .show>.nav-link {
+  
+    color: white;
+
+  }
+
+  
+  .navbar-dark .navbar-nav .active>.nav-link:hover,
+  .navbar-dark .navbar-nav .nav-link.active:hover,
+  .navbar-dark .navbar-nav .nav-link.show:hover,
+  .navbar-dark .navbar-nav .show>.nav-link:hover {
+    color: rgb(121, 121, 223);
+  }
+
+
+  
+
+
+
+  .nav-link {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    letter-spacing: .025em;
+    font-size: 15px;
+  }
+
+  .navbar-nav .nav-link {
+    color: rgb(91, 91, 243);
+    transition: background-color .2s ease-in-out, color .2s ease-in-out;
+
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 10rem;
+    padding: .5rem 0;
+    margin: .125rem 0 0;
+    font-size: 1rem;
+    color: #ced4da;
+    text-align: left;
+    list-style: none;
+    background-color: #2a2929 !important;
+    background-clip: padding-box;
+    border: 1px solid rgba(228, 217, 217, 0.15);
+    border-radius: .25rem;
+  }
+
+  .dropdown-item {
+    color: #9facbd;
+    transition: background-color .2s ease-in-out, color .2s ease-in-out;
+  }
+
+  .nav-item.active:hover {
+    color: white;
+  }
+
+ 
+ 
+</style>
+</head>
+
+<body>
+    
+     {%load static%}
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="{% url 'home' %}">
+      <img src="{%static 'news/8.png'%}" style="height: 45px;" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active " style="padding-left: 23px;">
+          <a class="nav-link " href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item active " style="padding-left: 23px;">
+          <a class="nav-link " href="#headline">Top News<span class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item active " style="padding-left: 23px;">
+          <a class="nav-link " href="#topworld">Top In World<span class="sr-only">(current)</span></a>
+        </li>
+      
+
+          
+        <li class="nav-item active" style="padding-left: 23px;">
+          <a class="nav-link" href="categories/">Categories</a>
+        </li>
+
+        
+        <li class="nav-item active" style="padding-left: 23px;">
+          <a class="nav-link" href="">COVID-19</a>
+        </li>
+       
+      </ul>
+    </div>
+  </nav>
+  {% block body %}
+  {% endblock %}
+
+
+
+  <footer class=" container py-5">
+      <div class="row">
+        <div class="col-12 col-md">
+          <a href="https://www.linkedin.com/in/vivek-singh-4059b91a8/"><img src="{%static 'news/8.png'%}" style="height: 45px; margin-top: -11px;" alt="">
+          <small class="d-block mb-3 text-muted">© VIVEKSINGH</small></a>
+        </div>
+        <div class="col-6 col-md" >
+          <a href="{% url 'home' %}"><h5 style="margin-bottom: 0.5rem;">HOME</h5>
+
+        </div>
+        <div class="col-6 col-md" >
+          <a href="{% url 'categories'%}"><h5 style="margin-bottom: 0.5rem;">CATEGORIES</h5>
+
+        </div>
+        <div class="col-6 col-md">
+          <a href="https://www.bbc.com/news"><h5 style="margin-bottom: 0.5rem;">BBCNEWS</h5>
+
+        </div>
+        <div class="col-6 col-md">
+          <a href="{https://www.linkedin.com/in/vivek-singh-4059b91a8/"><h5 style="margin-bottom: 0.5rem;">About</h5>
+
+        </div>
+
+        <div class="col-6 col-md">
+          <a style="margin-bottom: 0.5rem;" href="#">back to top</a>
+
+        </div>
+      </div>
+      </footer>
+
+      {% block foot %}
+      {% endblock %}
+
+</body>
+</html>
