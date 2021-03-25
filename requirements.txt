@@ -4,7 +4,6 @@ chardet==4.0.0
 click==7.1.2
 cycler==0.10.0
 Django==3.0.8
-django-email-verification==0.0.7
 djangorestframework==3.12.2
 Flask==1.1.2
 idna==2.10
